@@ -1,0 +1,103 @@
+import { Category } from '../types';
+
+export const DEFAULT_CATEGORIES: Category[] = [
+  // Expense Categories
+  {
+    id: 'cat_food',
+    name: 'Food & Dining',
+    type: 'expense',
+    icon: 'restaurant-outline',
+    color: '#F59E0B',
+    bgColor: '#FEF3C7',
+  },
+  {
+    id: 'cat_transport',
+    name: 'Transport',
+    type: 'expense',
+    icon: 'car-sport-outline',
+    color: '#3B82F6',
+    bgColor: '#DBEAFE',
+  },
+  {
+    id: 'cat_shopping',
+    name: 'Shopping',
+    type: 'expense',
+    icon: 'bag-handle-outline',
+    color: '#EC4899',
+    bgColor: '#FCE7F3',
+  },
+  {
+    id: 'cat_bills',
+    name: 'Bills & Utilities',
+    type: 'expense',
+    icon: 'flash-outline',
+    color: '#EF4444',
+    bgColor: '#FEE2E2',
+  },
+  {
+    id: 'cat_housing',
+    name: 'Housing & Rent',
+    type: 'expense',
+    icon: 'home-outline',
+    color: '#8B5CF6',
+    bgColor: '#EDE9FE',
+  },
+  {
+    id: 'cat_healthcare',
+    name: 'Healthcare',
+    type: 'expense',
+    icon: 'medkit-outline',
+    color: '#10B981',
+    bgColor: '#D1FAE5',
+  },
+  {
+    id: 'cat_entertainment',
+    name: 'Entertainment',
+    type: 'expense',
+    icon: 'film-outline',
+    color: '#6366F1',
+    bgColor: '#E0E7FF',
+  },
+  {
+    id: 'cat_education',
+    name: 'Education',
+    type: 'expense',
+    icon: 'school-outline',
+    color: '#14B8A6',
+    bgColor: '#CCFBF1',
+  },
+
+  // Income Categories
+  {
+    id: 'cat_salary',
+    name: 'Salary',
+    type: 'income',
+    icon: 'briefcase-outline',
+    color: '#059669',
+    bgColor: '#D1FAE5',
+  },
+  {
+    id: 'cat_freelance',
+    name: 'Freelance & Projects',
+    type: 'income',
+    icon: 'laptop-outline',
+    color: '#0D9488',
+    bgColor: '#CCFBF1',
+  },
+  {
+    id: 'cat_investments',
+    name: 'Investments & Returns',
+    type: 'income',
+    icon: 'trending-up-outline',
+    color: '#2563EB',
+    bgColor: '#DBEAFE',
+  },
+  {
+    id: 'cat_other_income',
+    name: 'Other Income',
+    type: 'income',
+    icon: 'cash-outline',
+    color: '#10B981',
+    bgColor: '#ECFDF5',
+  },
+];

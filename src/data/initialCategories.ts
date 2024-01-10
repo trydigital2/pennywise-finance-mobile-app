@@ -1,0 +1,1 @@
+export { DEFAULT_CATEGORIES as INITIAL_CATEGORIES } from '../constants/CATEGORIES';
