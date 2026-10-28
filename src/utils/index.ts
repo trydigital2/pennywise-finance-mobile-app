@@ -3,3 +3,4 @@ export * from './date';
 export * from './calculations';
 export * from './validators';
 export * from "./financialHealth";
+export * from "./savingsOptimizer";
