@@ -5,3 +5,4 @@ export * from './validators';
 export * from "./financialHealth";
 export * from "./savingsOptimizer";
 export * from "./debtPayoff";
+export * from "./emergencyFund";
