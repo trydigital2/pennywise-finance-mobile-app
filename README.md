@@ -152,5 +152,4 @@ PennyWise is a **local-first simulation and portfolio showcase application**.
 
 ---
 
-## 📄 License
-MIT License. © 2026 Kuldeep Kumar.
+
