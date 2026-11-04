@@ -17,3 +17,5 @@ export * from './ConfirmationDialog';
 export * from "./FinancialHealthCard";
 export * from "./BudgetRule50_30_20Card";
 export * from "./DebtPayoffPlannerCard";
+export * from "./SIPWealthProjectorCard";
+
