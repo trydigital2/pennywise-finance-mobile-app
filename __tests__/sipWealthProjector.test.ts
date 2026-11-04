@@ -49,3 +49,4 @@ describe('PennyWise SIP Wealth Compounding Projector', () => {
     });
   });
 });
+

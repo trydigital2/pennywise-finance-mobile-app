@@ -92,3 +92,4 @@ export function formatPaiseToCompactINR(paise: number): string {
   }
   return `₹${Math.round(rupees).toLocaleString('en-IN')}`;
 }
+
