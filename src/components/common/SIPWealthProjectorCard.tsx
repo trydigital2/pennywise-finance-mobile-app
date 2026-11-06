@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ViewStyle, StyleProp } from "react-native";
-import { Colors } from "../../theme/colors";
+import { Colors, Palette } from "../../theme/colors";
 import { Typography } from "../../theme/typography";
 import { Spacing } from "../../theme/spacing";
 import { Radii } from "../../theme/radii";
@@ -52,16 +52,16 @@ export const SIPWealthProjectorCard: React.FC<SIPWealthProjectorCardProps> = ({
         </TouchableOpacity>
       </View>
 
-      {/* Primary Corpus Highlight */}
+      {/* Corpus Hero Banner */}
       <View style={styles.corpusContainer}>
-        <Text style={styles.corpusLabel}>Projected Corpus ({durationYears} Years)</Text>
+        <Text style={styles.corpusLabel}>ESTIMATED FUTURE WEALTH</Text>
         <Text style={styles.corpusValue}>{formatPaiseToCompactINR(projection.totalCorpusPaise)}</Text>
         <Text style={styles.corpusInflation}>
           ≈ {formatPaiseToCompactINR(projection.inflationAdjustedCorpusPaise)} in today's purchasing power (6% inflation)
         </Text>
       </View>
 
-      {/* Invested vs Wealth Gain Grid */}
+      {/* Stats Breakdown */}
       <View style={styles.statsGrid}>
         <View style={styles.statBox}>
           <Text style={styles.statLabel}>Total Invested</Text>
@@ -70,7 +70,7 @@ export const SIPWealthProjectorCard: React.FC<SIPWealthProjectorCardProps> = ({
         </View>
         <View style={styles.statBox}>
           <Text style={styles.statLabel}>Wealth Gain</Text>
-          <Text style={[styles.statNumber, { color: Colors.emerald500 }]}>
+          <Text style={[styles.statNumber, { color: Palette.emerald500 }]}>
             +{formatPaiseToCompactINR(projection.estimatedReturnsPaise)}
           </Text>
           <Text style={styles.statSub}>{projection.wealthMultiplier}x Multiplier</Text>
@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: Colors.surface,
     borderRadius: Radii.lg,
-    padding: Spacing.base,
+    padding: Spacing.md,
     borderWidth: 1,
     borderColor: Colors.border,
-    marginBottom: Spacing.base,
+    marginBottom: Spacing.md,
     ...Shadows.sm,
   },
   headerRow: {
@@ -113,12 +113,12 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.md,
   },
   title: {
-    fontSize: Typography.fontSize.base,
-    fontWeight: Typography.fontWeight.bold,
+    fontSize: Typography.fontSizes.md,
+    fontWeight: Typography.fontWeights.bold,
     color: Colors.textPrimary,
   },
   subtitle: {
-    fontSize: Typography.fontSize.xs,
+    fontSize: Typography.fontSizes.xs,
     color: Colors.textMuted,
     marginTop: 2,
   },
@@ -131,37 +131,37 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.surfaceSecondary,
   },
   stepUpBadgeActive: {
-    backgroundColor: Colors.emerald100,
-    borderColor: Colors.emerald500,
+    backgroundColor: Palette.emerald100,
+    borderColor: Palette.emerald500,
   },
   stepUpBadgeText: {
-    fontSize: Typography.fontSize.xs,
+    fontSize: Typography.fontSizes.xs,
     color: Colors.textSecondary,
-    fontWeight: Typography.fontWeight.semibold,
+    fontWeight: Typography.fontWeights.semibold,
   },
   stepUpBadgeTextActive: {
-    color: Colors.emerald700,
+    color: Palette.emerald700,
   },
   corpusContainer: {
-    backgroundColor: Colors.navy900,
+    backgroundColor: Palette.navy900,
     borderRadius: Radii.md,
     padding: Spacing.md,
     marginBottom: Spacing.md,
   },
   corpusLabel: {
-    fontSize: Typography.fontSize.xs,
-    color: Colors.navy400,
-    fontWeight: Typography.fontWeight.medium,
+    fontSize: Typography.fontSizes.xs,
+    color: Palette.navy400,
+    fontWeight: Typography.fontWeights.medium,
   },
   corpusValue: {
-    fontSize: Typography.fontSize["2xl"],
-    fontWeight: Typography.fontWeight.heavy,
-    color: Colors.emerald400,
+    fontSize: Typography.fontSizes.xxl,
+    fontWeight: Typography.fontWeights.heavy,
+    color: Palette.emerald400,
     marginVertical: 4,
   },
   corpusInflation: {
     fontSize: 11,
-    color: Colors.navy300,
+    color: Palette.navy300,
   },
   statsGrid: {
     flexDirection: "row",
@@ -177,11 +177,11 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 11,
     color: Colors.textMuted,
-    fontWeight: Typography.fontWeight.medium,
+    fontWeight: Typography.fontWeights.medium,
   },
   statNumber: {
-    fontSize: Typography.fontSize.base,
-    fontWeight: Typography.fontWeight.bold,
+    fontSize: Typography.fontSizes.md,
+    fontWeight: Typography.fontWeights.bold,
     color: Colors.textPrimary,
     marginVertical: 2,
   },
@@ -201,15 +201,16 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.surfaceSecondary,
   },
   yearButtonActive: {
-    backgroundColor: Colors.blue600,
+    backgroundColor: Palette.blue600,
   },
   yearText: {
-    fontSize: Typography.fontSize.xs,
+    fontSize: Typography.fontSizes.xs,
     color: Colors.textSecondary,
-    fontWeight: Typography.fontWeight.semibold,
+    fontWeight: Typography.fontWeights.semibold,
   },
   yearTextActive: {
-    color: Colors.white,
+    color: Palette.white,
   },
 });
 
+export default SIPWealthProjectorCard;
