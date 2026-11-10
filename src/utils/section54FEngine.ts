@@ -79,3 +79,4 @@ export function calculateSection54FExemption(inputs: Section54FInputs): Section5
       : `Partial exemption: ${Math.round(ratio * 100)}% of net consideration reinvested.`,
   };
 }
+
