@@ -18,4 +18,6 @@ export * from "./FinancialHealthCard";
 export * from "./BudgetRule50_30_20Card";
 export * from "./DebtPayoffPlannerCard";
 export * from "./SIPWealthProjectorCard";
+export * from "./EmergencyFundStressTestCard";
+export * from "./FIREPlannerCard";
 

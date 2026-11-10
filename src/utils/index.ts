@@ -6,4 +6,6 @@ export * from "./financialHealth";
 export * from "./savingsOptimizer";
 export * from "./debtPayoff";
 export * from "./sipWealthProjector";
+export * from "./emergencyFund";
+export * from "./firePlanner";
 
